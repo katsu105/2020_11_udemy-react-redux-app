@@ -5,13 +5,13 @@ const initialState = { value: 0 }
 
 // 渡せるようにexport
 // 受け取ったアクションに対して
-export default (store = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return { value: state.value + 1}
     case DECREMENT:
       return { value: state.value - 1}
-    default:
-      return state
+      default:
+        return state
   }
 }
